@@ -177,8 +177,6 @@ The dashboard has 5 tabs:
 
 !\[Trends 2](screenshots/05\_trends\_2.png)
 
-
-
 \---
 
 \## 👤 Contact
