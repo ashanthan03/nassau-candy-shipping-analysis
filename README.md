@@ -1,106 +1,161 @@
-\# 🍬 Nassau Candy Distributor — Shipping Route Efficiency Analysis
+# 🍬 Nassau Candy Distributor — Shipping Route Efficiency Analysis
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.31-red)
+![Pandas](https://img.shields.io/badge/Pandas-2.2-green)
+![Plotly](https://img.shields.io/badge/Plotly-5.19-purple)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
+> **Internship Project | Unified Mentor**
 
-!\[Python](https://img.shields.io/badge/Python-3.12-blue)
+---
 
-!\[Streamlit](https://img.shields.io/badge/Streamlit-1.31-red)
+## 📌 Project Overview
 
-!\[Pandas](https://img.shields.io/badge/Pandas-2.2-green)
+Nassau Candy Distributor ships candy products from **5 factories** across the US to customers in **59 states**. This project analyzes **10,194 shipment orders** across **196 unique routes** to identify efficiency bottlenecks, compare shipping modes, and provide data-driven logistics recommendations.
 
-!\[Plotly](https://img.shields.io/badge/Plotly-5.19-purple)
+---
 
-!\[Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-
-
-
-> \*\*Internship Project | Unified Mentor\*\*
-
-
-
-\---
-
-
-
-\## 📌 Project Overview
-
-
-
-Nassau Candy Distributor ships candy products from \*\*5 factories\*\* across the US to customers in \*\*59 states\*\*. This project analyzes \*\*10,194 shipment orders\*\* across \*\*196 unique routes\*\* to identify efficiency bottlenecks, compare shipping modes, and provide data-driven logistics recommendations.
-
-
-
-\---
-
-
-
-\## 🏭 Factories Analyzed
-
-
+## 🏭 Factories Analyzed
 
 | Factory | Location | Products |
-
 |---|---|---|
-
 | Lot's O' Nuts | Arizona | Wonka Bar (Nutty Crunch, Fudge Mallows, Scrumdiddlyumptious) |
-
 | Wicked Choccy's | Georgia | Wonka Bar (Milk Chocolate, Triple Dazzle Caramel) |
-
 | Sugar Shack | Minnesota | Laffy Taffy, SweeTARTS, Nerds, Fun Dip |
-
 | Secret Factory | Illinois | Everlasting Gobstopper, Wonka Gum |
-
 | The Other Factory | Tennessee | Hair Toffee, Kazookles |
 
+---
 
+## 📊 Key Findings
 
-\---
+- 📦 **10,194 orders** analyzed across **196 factory-to-state routes**
+- 🏆 **The Other Factory (TN)** is the fastest — avg 1,280 days lead time
+- 🐢 **Sugar Shack to Northeast** routes are the worst bottleneck (1,641-1,642 days)
+- 🚚 **Standard Class** is paradoxically faster than First Class and Same Day
+- 🌍 **Gulf region** is the most efficient delivery region
+- ⚠️ **Washington state** is a high-volume bottleneck (506 orders, 1,361 days avg)
 
+---
 
+## 🛠 Tech Stack
 
-\## 📊 Key Findings
+- **Python 3.12** — Core language
+- **Pandas** — Data cleaning and feature engineering
+- **Matplotlib / Seaborn** — Static EDA visualizations
+- **Plotly** — Interactive charts
+- **Streamlit** — Web dashboard
+- **Scikit-learn** — Efficiency score normalization
 
+---
 
+## 📁 Project Structure
 
-\- 📦 \*\*10,194 orders\*\* analyzed across \*\*196 factory-to-state routes\*\*
+```
+nassau_project/
+├── data/
+├── notebooks/eda_analysis.py
+├── dashboard/app.py
+├── outputs/
+│   ├── charts/
+│   └── reports/
+├── screenshots/
+├── requirements.txt
+└── README.md
+```
 
-\- 🏆 \*\*The Other Factory (TN)\*\* is the fastest — avg 1,280 days lead time
+---
 
-\- 🐢 \*\*Sugar Shack to Northeast\*\* routes are the worst bottleneck (1,641-1,642 days)
+## 🚀 How to Run
 
-\- 🚚 \*\*Standard Class\*\* is paradoxically faster than First Class and Same Day
+**1. Clone the repository**
 
-\- 🌍 \*\*Gulf region\*\* is the most efficient delivery region
+```bash
+git clone https://github.com/ashanthan03/nassau-candy-shipping-analysis.git
+cd nassau-candy-shipping-analysis
+```
 
-\- ⚠️ \*\*Washington state\*\* is a high-volume bottleneck (506 orders, 1,361 days avg)
+**2. Install dependencies**
 
+```bash
+pip install -r requirements.txt
+```
 
+**3. Run EDA analysis**
 
-\---
+```bash
+cd notebooks
+python eda_analysis.py
+```
 
+**4. Launch Streamlit dashboard**
 
+```bash
+cd dashboard
+streamlit run app.py
+```
 
-\## 🛠 Tech Stack
+Dashboard opens at: **http://localhost:8501**
 
+---
 
+## 📈 Dashboard Features
 
-\- \*\*Python 3.12\*\* — Core language
+| Tab | Description |
+|---|---|
+| 📊 Route Efficiency | Leaderboard of top/bottom 10 routes |
+| 🗺 Geographic Map | US heatmap by state |
+| 🚚 Ship Mode Analysis | Lead time comparison across shipping modes |
+| 🔍 Route Drill-Down | Order-level timeline for any route |
+| 📈 Trends & Insights | Monthly trends and correlations |
 
-\- \*\*Pandas\*\* — Data cleaning and feature engineering
+---
 
-\- \*\*Matplotlib / Seaborn\*\* — Static EDA visualizations
+## 📸 Dashboard Screenshots
 
-\- \*\*Plotly\*\* — Interactive charts
+### Route Efficiency Tab
 
-\- \*\*Streamlit\*\* — Web dashboard
+![Route Efficiency 1](screenshots/01_route_efficiency_1.png)
 
-\- \*\*Scikit-learn\*\* — Efficiency score normalization
+![Route Efficiency 2](screenshots/01_route_efficiency_2.png)
 
+### Geographic Map Tab
 
+![Geographic Map 1](screenshots/02_geographic_map_1.png)
 
-\---
+![Geographic Map 2](screenshots/02_geographic_map_2.png)
 
+### Ship Mode Analysis Tab
 
+![Ship Mode 1](screenshots/03_shipmode_1.png)
 
-\## 📁 Project Structure
+![Ship Mode 2](screenshots/03_shipmode_2.png)
 
+### Route Drill-Down Tab
+
+![Drill Down 1](screenshots/04_drilldown_1.png)
+
+![Drill Down 2](screenshots/04_drilldown_2.png)
+
+### Trends and Insights Tab
+
+![Trends 1](screenshots/05_trends_1.png)
+
+![Trends 2](screenshots/05_trends_2.png)
+
+---
+
+## 📄 Deliverables
+
+- Research Paper
+- Executive Summary
+- Interactive Streamlit Dashboard
+- Route KPI Table (196 routes)
+- 10 EDA Visualization Charts
+
+---
+
+## 👤 Contact
+
+Akkinapalli Shanthan Kumar | ashanthan03@gmail.com | Unified Mentor Internship
