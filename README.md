@@ -1,185 +1,106 @@
-# Nassau Candy Distributor — Shipping Route Efficiency Analysis
+\# 🍬 Nassau Candy Distributor — Shipping Route Efficiency Analysis
 
-## Complete Project by \[Your Name] | Unified Mentor Internship
+
+
+!\[Python](https://img.shields.io/badge/Python-3.12-blue)
+
+!\[Streamlit](https://img.shields.io/badge/Streamlit-1.31-red)
+
+!\[Pandas](https://img.shields.io/badge/Pandas-2.2-green)
+
+!\[Plotly](https://img.shields.io/badge/Plotly-5.19-purple)
+
+!\[Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+
+
+
+> \*\*Internship Project | Unified Mentor\*\*
+
+
 
 \---
 
-## Project Structure
 
-```
-nassau\_project/
-│
-├── data/
-│   └── Nassau\_Candy\_Distributor.csv        ← Raw dataset
-│
-├── notebooks/
-│   └── eda\_analysis.py                     ← Full EDA script (run this first)
-│
-├── dashboard/
-│   └── app.py                              ← Streamlit dashboard
-│
-├── outputs/
-│   ├── charts/                             ← 10 EDA charts (auto-generated)
-│   │   ├── 01\_lead\_time\_distribution.png
-│   │   ├── 02\_ship\_mode\_comparison.png
-│   │   ├── 03\_factory\_performance.png
-│   │   ├── 04\_regional\_performance.png
-│   │   ├── 05\_top\_bottom\_routes.png
-│   │   ├── 06\_delay\_analysis.png
-│   │   ├── 07\_time\_trends.png
-│   │   ├── 08\_state\_volume\_vs\_leadtime.png
-│   │   ├── 09\_correlation\_heatmap.png
-│   │   └── 10\_division\_performance.png
-│   │
-│   └── reports/
-│       ├── route\_kpis.csv                  ← Route-level KPI table (auto-generated)
-│       ├── cleaned\_dataset.csv             ← Cleaned data with features (auto-generated)
-│       ├── research\_paper.md               ← Full research paper
-│       └── executive\_summary.md            ← Executive summary
-│
-├── requirements.txt
-└── README.md
-```
+
+\## 📌 Project Overview
+
+
+
+Nassau Candy Distributor ships candy products from \*\*5 factories\*\* across the US to customers in \*\*59 states\*\*. This project analyzes \*\*10,194 shipment orders\*\* across \*\*196 unique routes\*\* to identify efficiency bottlenecks, compare shipping modes, and provide data-driven logistics recommendations.
+
+
 
 \---
 
-## Setup Instructions (One Time Only)
 
-### Step 1: Install Python
 
-Make sure Python 3.9+ is installed. Check with:
+\## 🏭 Factories Analyzed
 
-```bash
-python --version
-```
 
-### Step 2: Create a virtual environment (recommended)
 
-```bash
-python -m venv nassau\_env
+| Factory | Location | Products |
 
-# Windows:
-nassau\_env\\Scripts\\activate
+|---|---|---|
 
-# Mac/Linux:
-source nassau\_env/bin/activate
-```
+| Lot's O' Nuts | Arizona | Wonka Bar (Nutty Crunch, Fudge Mallows, Scrumdiddlyumptious) |
 
-### Step 3: Install all dependencies
+| Wicked Choccy's | Georgia | Wonka Bar (Milk Chocolate, Triple Dazzle Caramel) |
 
-```bash
-pip install -r requirements.txt
-```
+| Sugar Shack | Minnesota | Laffy Taffy, SweeTARTS, Nerds, Fun Dip |
+
+| Secret Factory | Illinois | Everlasting Gobstopper, Wonka Gum |
+
+| The Other Factory | Tennessee | Hair Toffee, Kazookles |
+
+
 
 \---
 
-## Running the Project
 
-### STEP A — Run the EDA Analysis (generates all charts)
 
-```bash
-cd notebooks
-python eda\_analysis.py
-```
+\## 📊 Key Findings
 
-This will:
 
-* Load and clean the dataset
-* Engineer all features (Lead Time, Factory, Routes, etc.)
-* Generate 10 charts saved in outputs/charts/
-* Print all key findings to the console
-* Save route\_kpis.csv and cleaned\_dataset.csv to outputs/reports/
 
-### STEP B — Launch the Streamlit Dashboard
+\- 📦 \*\*10,194 orders\*\* analyzed across \*\*196 factory-to-state routes\*\*
 
-```bash
-cd dashboard
-streamlit run app.py
-```
+\- 🏆 \*\*The Other Factory (TN)\*\* is the fastest — avg 1,280 days lead time
 
-This will open the dashboard at: **http://localhost:8501**
+\- 🐢 \*\*Sugar Shack to Northeast\*\* routes are the worst bottleneck (1,641-1,642 days)
 
-The dashboard has 5 tabs:
+\- 🚚 \*\*Standard Class\*\* is paradoxically faster than First Class and Same Day
 
-1. 📊 Route Efficiency — Leaderboard, factory performance
-2. 🗺 Geographic Map — US heatmap by state
-3. 🚚 Ship Mode Analysis — Comparison across modes
-4. 🔍 Route Drill-Down — State + order level detail
-5. 📈 Trends \& Insights — Time trends, correlations
+\- 🌍 \*\*Gulf region\*\* is the most efficient delivery region
+
+\- ⚠️ \*\*Washington state\*\* is a high-volume bottleneck (506 orders, 1,361 days avg)
+
+
 
 \---
 
-## Deliverables Summary
 
-|Deliverable|Location|Status|
-|-|-|-|
-|Cleaned Dataset|outputs/reports/cleaned\_dataset.csv|✅ Auto-generated|
-|Route KPI Table|outputs/reports/route\_kpis.csv|✅ Auto-generated|
-|10 EDA Charts|outputs/charts/\*.png|✅ Auto-generated|
-|Streamlit Dashboard|dashboard/app.py|✅ Ready to run|
-|Research Paper|outputs/reports/research\_paper.md|✅ Complete|
-|Executive Summary|outputs/reports/executive\_summary.md|✅ Complete|
+
+\## 🛠 Tech Stack
+
+
+
+\- \*\*Python 3.12\*\* — Core language
+
+\- \*\*Pandas\*\* — Data cleaning and feature engineering
+
+\- \*\*Matplotlib / Seaborn\*\* — Static EDA visualizations
+
+\- \*\*Plotly\*\* — Interactive charts
+
+\- \*\*Streamlit\*\* — Web dashboard
+
+\- \*\*Scikit-learn\*\* — Efficiency score normalization
+
+
 
 \---
 
-## Key Findings (Quick Reference)
-
-* **Total Orders:** 10,194 | **Unique Routes:** 196
-* **Best Factory:** The Other Factory (Tennessee) — 1,280 days avg
-* **Worst Factory:** Sugar Shack (Minnesota) — 1,340 days avg
-* **Best Ship Mode:** Standard Class — 1,314 days avg (paradoxically fastest)
-* **Best Region:** Gulf — 1,311 days avg
-* **Top State (Volume):** California — 2,001 orders
-* **Worst Bottleneck:** Sugar Shack → New Jersey — 1,642 days avg
-* **Overall Delay Rate:** 42.2% (using median threshold)
-
-\---
-
-## 📸 Dashboard Screenshots
 
 
-
-\### 📊 Route Efficiency
-
-!\[Route Efficiency 1](screenshots/01\_route\_efficiency\_1.png)
-
-!\[Route Efficiency 2](screenshots/01\_route\_efficiency\_2.png)
-
-
-
-\### 🗺 Geographic Map
-
-!\[Geographic Map 1](screenshots/02\_geographic\_map\_1.png)
-
-!\[Geographic Map 2](screenshots/02\_geographic\_map\_2.png)
-
-
-
-\### 🚚 Ship Mode Analysis
-
-!\[Ship Mode 1](screenshots/03\_shipmode\_1.png)
-
-!\[Ship Mode 2](screenshots/03\_shipmode\_2.png)
-
-
-
-\### 🔍 Route Drill-Down
-
-!\[Drill Down 1](screenshots/04\_drilldown\_1.png)
-
-!\[Drill Down 2](screenshots/04\_drilldown\_2.png)
-
-
-
-\### 📈 Trends \& Insights
-
-!\[Trends 1](screenshots/05\_trends\_1.png)
-
-!\[Trends 2](screenshots/05\_trends\_2.png)
-
-\---
-
-\## 👤 Contact
-
-\[Akkinapalli Shanthan Kumar] | \[ashanthan03@gmail.com] | Unified Mentor Internship
+\## 📁 Project Structure
 
