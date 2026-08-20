@@ -116,7 +116,7 @@ df, DELAY_THRESHOLD = load_data()
 # SIDEBAR — FILTERS
 # ============================================================
 st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Candy_in_Damascus.jpg/320px-Candy_in_Damascus.jpg",
-                 use_column_width=True)
+                 use_container_width=True)
 st.sidebar.markdown("## 🍬 Nassau Candy")
 st.sidebar.markdown("### Filters")
 
